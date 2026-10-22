@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>تماس | مهرینه</title>
+    <meta name="description" content="با مهرینه در ارتباط باشید">
+    <meta name="theme-color" content="#0B6E4F">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+  </head>
+  <body>
+
+    <main>
+
+      <section class="wrap split">
+        <div>
+          <h1>با ما حرف بزنید</h1>
+          <p class="lead">سالمند، فرزند یک سالمند یا مسئول مرکز سالمندی هستید؟ نظر شما محصول را واقعی‌تر می‌کند.</p>
+          <div class="card" id="privacy" style="padding:1.2rem">
+            <i data-lucide="lock" class="i"></i>
+            <h3>حریم خصوصی</h3>
+            <p>اطلاعات فقط برای هماهنگی همین گفت‌وگو استفاده می‌شود. فرم نمایشی است و چیزی ارسال نمی‌کند.</p>
+          </div>
+        </div>
+        <form data-demo>
+          <div class="field">
+            <label for="n">نام</label>
+            <input class="input" id="n" required>
+          </div>
+          <div class="field">
+            <label for="r">شما کدام هستید؟</label>
+            <select class="input" id="r">
+              <option>سالمند</option>
+              <option>قیم یا فرزند</option>
+              <option>مرکز سالمندی</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="t">شماره‌ی تماس</label>
+            <input class="input" id="t" inputmode="tel">
+          </div>
+          <div class="field">
+            <label for="m">چه کاری برایتان دشوار است؟</label>
+            <textarea class="input" id="m"></textarea>
+          </div>
+          <button class="btn">ارسال</button>
+          <div class="msg" role="status">پیام شما ثبت شد (نمایشی).</div>
+        </form>
+      </section>
+    </main>
+    <script src="data/lessons-data.js"></script>
+    <script src="data/content.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/ui-common.js"></script>
+  </body>
+</html>

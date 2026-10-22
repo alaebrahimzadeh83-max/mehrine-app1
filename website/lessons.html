@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>آموزش‌ها | مهرینه</title>
+    <meta name="description" content="آموزش‌های شبیه‌ساز برای اسنپ، خرید، قبض و ارتباط">
+    <meta name="theme-color" content="#0B6E4F">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+  </head>
+  <body>
+
+    <main>
+
+      <section class="wrap">
+        <h1>آموزش‌ها</h1>
+        <p class="lead">همه‌ی آموزش‌ها روی یک گوشی نمایشی تمرین می‌شوند؛ بدون ترس از اشتباه. تاکنون <b id="done-count">۰</b> آموزش را تمام کرده‌اید.</p>
+        <form id="profile-form" class="row" style="margin:1.5rem 0;align-items:end">
+          <div class="field" style="margin:0">
+            <label for="lv">آشنایی با گوشی</label>
+            <select class="input" id="lv" name="level">
+              <option value="beginner">تازه‌کار</option>
+              <option value="medium">کارهای اصلی را بلدم</option>
+            </select>
+          </div>
+          <div class="field" style="margin:0">
+            <label for="it">علاقه</label>
+            <select class="input" id="it" name="interest">
+              <option value="all">همه‌چیز</option>
+              <option value="transport">رفت‌وآمد</option>
+              <option value="shop">خرید</option>
+              <option value="pay">پرداخت</option>
+              <option value="connect">ارتباط</option>
+              <option value="safety">امنیت</option>
+              <option value="learn">یادگیری</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">پیشنهاد بده</button>
+        </form>
+        <div class="msg" id="profile-msg" role="status"></div>
+        <div class="chips" style="margin-top:1.5rem">
+          <button class="chip" data-cat="all" aria-pressed="true">همه</button>
+          <button class="chip" data-cat="transport" aria-pressed="false"><i data-lucide="car" class="i"></i>رفت‌وآمد</button>
+          <button class="chip" data-cat="shop" aria-pressed="false"><i data-lucide="shopping-cart" class="i"></i>خرید</button>
+          <button class="chip" data-cat="pay" aria-pressed="false"><i data-lucide="credit-card" class="i"></i>پرداخت</button>
+          <button class="chip" data-cat="connect" aria-pressed="false"><i data-lucide="video" class="i"></i>ارتباط</button>
+          <button class="chip" data-cat="safety" aria-pressed="false"><i data-lucide="shield-check" class="i"></i>امنیت</button>
+          <button class="chip" data-cat="learn" aria-pressed="false"><i data-lucide="library" class="i"></i>یادگیری</button>
+        </div>
+        <div class="grid g3" id="lesson-grid"></div>
+      </section>
+
+      <section class="player" id="player">
+        <div class="wrap">
+          <div class="row" style="justify-content:space-between">
+            <h2 id="p-title" style="margin:0"></h2>
+            <button class="btn l sm" id="p-close" type="button"><i data-lucide="x" class="i"></i>بستن</button>
+          </div>
+          <div id="step-area">
+            <div class="stage">
+              <div>
+                <p id="p-count" style="color:var(--o);font-weight:800;margin:0"></p>
+                <h3 id="p-step-title" style="font-size:1.6rem"></h3>
+                <p id="p-text" style="font-size:1.15rem;color:var(--ink)"></p>
+                <div class="tip" id="p-tip"></div>
+                <div class="warn" id="p-warn"></div>
+                <div class="dots" id="p-dots"></div>
+                <div class="nav2">
+                  <button class="btn l" id="p-prev" type="button">گام قبل</button>
+                  <button class="btn o" id="p-help" type="button"><i data-lucide="life-buoy" class="i"></i>گیر کرده‌ام</button>
+                  <button class="btn l" id="p-skip" type="button"></button>
+                </div>
+              </div>
+              <div class="phone" id="sim" aria-live="polite"></div>
+            </div>
+          </div>
+          <div id="done-box" hidden style="text-align:center;padding:2rem">
+            <i data-lucide="award" class="i" style="width:4rem;height:4rem;color:var(--o)"></i>
+            <h2 id="done-title"></h2>
+            <button class="btn l" id="again" type="button">مرور دوباره</button>
+            <a class="btn" href="#lesson-grid">آموزش بعدی</a>
+          </div>
+        </div>
+      </section>
+
+      <dialog id="lock-d">
+        <h3 id="lock-t"></h3>
+        <p>با خرید اشتراک، این آموزش و بقیه‌ی آموزش‌های همین سطح باز می‌شوند.</p>
+        <div class="row">
+          <a class="btn" id="lock-go" href="pricing.html"></a>
+          <button class="btn l" data-close>بعداً</button>
+        </div>
+      </dialog>
+
+      <dialog id="help-dialog">
+        <h3>کمک در راه است</h3>
+        <p>یکی را انتخاب کنید.</p>
+        <div class="row">
+          <a class="btn" href="contact.html?need=family">پیام به خانواده</a>
+          <a class="btn o" href="contact.html?need=support">پشتیبان انسانی</a>
+          <button class="btn l" data-close>ادامه می‌دهم</button>
+        </div>
+      </dialog>
+    </main>
+    <script src="data/lessons-data.js"></script>
+    <script src="data/content.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/ui-common.js"></script>
+    <script src="js/pages/lessons.js"></script>
+  </body>
+</html>

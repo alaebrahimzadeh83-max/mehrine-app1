@@ -1,0 +1,62 @@
+/* ==========================================================
+   پایه
+   ریست، تیترها، متن، لینک و فوکوس صفحه‌کلید.
+   ========================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 400 1rem/1.9 var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  direction: rtl;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.45;
+  margin: 0 0 .5em;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: clamp(2rem,5vw,3.2rem);
+}
+
+p {
+  margin: 0 0 1em;
+  color: var(--mute);
+}
+
+a {
+  color: var(--g);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--o);
+  outline-offset: 2px;
+}
+
+.i {
+  width: 1.25em;
+  height: 1.25em;
+  stroke-width: 2;
+  vertical-align: -.25em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none!important;
+    scroll-behavior: auto!important;
+  }
+}

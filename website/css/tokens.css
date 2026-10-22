@@ -1,0 +1,39 @@
+/* ==========================================================
+   توکن‌های طراحی
+   رنگ‌ها، گوشه‌ها، فونت و اندازه‌ی نوشته. رنگ‌های سایت را فقط از اینجا عوض کنید.
+   ========================================================== */
+
+:root {
+  --bg: #fff;
+  --soft: #F4F1EA;
+  --ink: #14201A;
+  --mute: #55635B;
+  --line: #DAD6CB;
+  --g: #0B6E4F;
+  --gd: #084A36;
+  --o: #E4572E;
+  --y: #F5B82E;
+  --r: 10px;
+  --font: "Vazirmatn",Tahoma,sans-serif;
+  --w: 1160px;
+}
+
+html {
+  font-size: 112.5%;
+  scroll-behavior: smooth;
+}
+
+html[data-size=lg] {
+  font-size: 125%;
+}
+
+html[data-size=xl] {
+  font-size: 140%;
+}
+
+html[data-contrast=high] {
+  --ink: #000;
+  --mute: #222;
+  --g: #04503A;
+  --line: #000;
+}

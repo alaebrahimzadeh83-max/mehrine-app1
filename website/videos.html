@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>فیلم‌های آموزشی | مهرینه</title>
+    <meta name="description" content="فیلم‌های کوتاه آموزشی">
+    <meta name="theme-color" content="#0B6E4F">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+  </head>
+  <body>
+
+    <main>
+
+      <section class="wrap">
+        <h1>فیلم‌های آموزشی</h1>
+        <p>فیلم‌های سطح ۱ و ۲ پس از خرید اشتراک باز می‌شوند.</p>
+        <div id="vids" class="grid g2"></div>
+      </section>
+
+      <dialog id="vd">
+        <h3 id="vt"></h3>
+        <div id="vb"></div>
+        <p>
+          <button class="btn l" data-close>بستن</button>
+        </p>
+      </dialog>
+    </main>
+    <script src="data/lessons-data.js"></script>
+    <script src="data/content.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/ui-common.js"></script>
+    <script src="js/pages/videos.js"></script>
+  </body>
+</html>

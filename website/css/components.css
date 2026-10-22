@@ -1,0 +1,444 @@
+/* ==========================================================
+   کامپوننت‌ها
+   دکمه، کارت، برچسب، فرم، پیام، تب، قیمت‌ها، پنجره‌ی گفت‌وگو و جدول.
+   ========================================================== */
+
+h2 {
+  font-size: clamp(1.5rem,3vw,2.1rem);
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 48px;
+  padding: .4rem 1.4rem;
+  border: 2px solid var(--g);
+  border-radius: var(--r);
+  background: var(--g);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  font-size: .95rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--gd);
+  border-color: var(--gd);
+}
+
+.btn.o {
+  background: var(--o);
+  border-color: var(--o);
+}
+
+.btn.l {
+  background: #fff;
+  color: var(--g);
+}
+
+.btn.l:hover {
+  background: var(--soft);
+}
+
+.btn.ic {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  background: #fff;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.btn.sm {
+  min-height: 40px;
+  padding: .2rem 1rem;
+}
+
+.btn[disabled] {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .1rem .7rem;
+  border-radius: 99px;
+  background: var(--soft);
+  color: var(--ink);
+}
+
+.tag.y {
+  background: var(--y);
+}
+
+.tag.g {
+  background: var(--g);
+  color: #fff;
+}
+
+.tag.o {
+  background: var(--o);
+  color: #fff;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.card:hover {
+  border-color: var(--g);
+}
+
+.card .bd {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  flex: 1;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  margin: 0;
+  font-size: .92rem;
+}
+
+.ph {
+  aspect-ratio: 16/10;
+  background: var(--soft) center/cover;
+  display: grid;
+  place-items: center;
+  color: var(--g);
+  position: relative;
+}
+
+.ph .i {
+  width: 2.4rem;
+  height: 2.4rem;
+  opacity: .5;
+}
+
+.ph img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lead {
+  font-size: 1.15rem;
+}
+
+.sec-h {
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
+.alt {
+  background: var(--soft);
+}
+
+.dark {
+  background: var(--gd);
+  color: #fff;
+}
+
+.dark h2,
+.dark p {
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ft {
+  margin-top: auto;
+}
+
+.quote {
+  border-right: 4px solid var(--o);
+  padding: .2rem 1.2rem;
+  font-size: 1.1rem;
+}
+
+.quote cite {
+  display: block;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--g);
+  font-style: normal;
+}
+
+details.faq {
+  border-bottom: 1px solid var(--line);
+}
+
+details.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 1rem 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+details.faq summary::after {
+  content: "+";
+  color: var(--o);
+  font-size: 1.4rem;
+}
+
+details.faq[open] summary::after {
+  content: "−";
+}
+
+details.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.cta {
+  padding: 3rem;
+  border-radius: var(--r);
+  background: var(--g);
+  text-align: center;
+}
+
+.cta h2,
+.cta p {
+  color: #fff;
+}
+
+.field {
+  margin-bottom: 1.1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: .3rem;
+  font-size: .92rem;
+}
+
+.input {
+  width: 100%;
+  min-height: 50px;
+  padding: .6rem 1rem;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--r);
+  font: inherit;
+  background: #fff;
+  color: var(--ink);
+}
+
+textarea.input {
+  min-height: 130px;
+}
+
+.msg {
+  display: none;
+  margin-top: 1rem;
+  padding: .8rem 1rem;
+  border-radius: var(--r);
+  background: var(--soft);
+  border-right: 4px solid var(--g);
+  font-weight: 600;
+}
+
+.msg.show {
+  display: block;
+}
+
+.msg.err {
+  border-color: var(--o);
+}
+
+.seg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+}
+
+.seg label {
+  border: 1.5px solid var(--line);
+  border-radius: var(--r);
+  padding: .8rem;
+  cursor: pointer;
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  margin: 0;
+}
+
+.seg input {
+  accent-color: var(--g);
+}
+
+.seg label:has(input:checked) {
+  border-color: var(--g);
+  background: var(--soft);
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid var(--line);
+  margin-bottom: 1.5rem;
+}
+
+.tabs button {
+  flex: 1;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 700;
+  padding: .8rem;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  color: var(--mute);
+}
+
+.tabs button[aria-selected=true] {
+  color: var(--g);
+  border-color: var(--g);
+}
+
+.plan {
+  padding: 1.6rem;
+  gap: .7rem;
+}
+
+.plan.top1 {
+  border: 2px solid var(--g);
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.price small {
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--mute);
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: .5rem;
+}
+
+.plan li {
+  display: flex;
+  gap: .5rem;
+  font-size: .92rem;
+}
+
+.plan li .i {
+  color: var(--g);
+  flex: none;
+}
+
+.chips {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.chip {
+  border: 1.5px solid var(--line);
+  background: #fff;
+  border-radius: 99px;
+  padding: .3rem 1rem;
+  min-height: 42px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  gap: .4rem;
+  align-items: center;
+}
+
+.chip[aria-pressed=true] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.bar {
+  height: 6px;
+  background: var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--g);
+}
+
+dialog {
+  border: 0;
+  border-radius: var(--r);
+  padding: 1.6rem;
+  max-width: 520px;
+  width: 92%;
+  direction: rtl;
+  font-family: var(--font);
+}
+
+dialog::backdrop {
+  background: rgba(20,32,26,.6);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+}
+
+th,
+td {
+  text-align: right;
+  padding: .7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  background: var(--soft);
+}
+
+.scroll {
+  overflow-x: auto;
+}

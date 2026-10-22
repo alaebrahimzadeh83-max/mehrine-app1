@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود و ثبت‌نام | مهرینه</title>
+    <meta name="description" content="ورود یا ساخت حساب برای سالمند و قیم">
+    <meta name="theme-color" content="#0B6E4F">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+  </head>
+  <body>
+
+    <main>
+
+      <section>
+        <div class="wrap" style="max-width:480px">
+          <div class="tabs" role="tablist">
+            <button role="tab" aria-selected="true" data-tab="reg">ثبت‌نام</button>
+            <button role="tab" aria-selected="false" data-tab="log">ورود</button>
+          </div>
+          <form id="reg">
+            <div class="field">
+              <label>شما کدام هستید؟</label>
+              <div class="seg">
+                <label>
+                  <input type="radio" name="role" value="elder" checked>
+                  <i data-lucide="user" class="i"></i>
+                  سالمند
+                </label>
+                <label>
+                  <input type="radio" name="role" value="guardian">
+                  <i data-lucide="heart-handshake" class="i"></i>
+                  قیم
+                </label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="n">نام</label>
+              <input class="input" id="n" name="name" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="p">شماره‌ی موبایل</label>
+              <input class="input" id="p" name="phone" inputmode="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹">
+            </div>
+            <div class="field">
+              <label for="w">رمز عبور</label>
+              <input class="input" id="w" name="pass" type="password" autocomplete="new-password">
+            </div>
+            <div class="field" id="cf" hidden>
+              <label for="c">کد سالمند (اختیاری)</label>
+              <input class="input" id="c" name="code" placeholder="MH-1234">
+              <p style="font-size:.85rem;margin-top:.3rem">سالمند کد را در پنل خودش می‌بیند.</p>
+            </div>
+            <button class="btn" style="width:100%">ساخت حساب</button>
+          </form>
+          <form id="log" hidden>
+            <div class="field">
+              <label for="lp">شماره‌ی موبایل</label>
+              <input class="input" id="lp" name="phone" inputmode="tel">
+            </div>
+            <div class="field">
+              <label for="lw">رمز عبور</label>
+              <input class="input" id="lw" name="pass" type="password">
+            </div>
+            <button class="btn" style="width:100%">ورود</button>
+          </form>
+          <div class="msg err" id="am" role="alert"></div>
+          <p style="font-size:.82rem;margin-top:1.5rem">نسخه‌ی نمایشی: اطلاعات فقط در همین مرورگر ذخیره می‌شود. ورود مدیر: ۰۹۰۰۰۰۰۰۰۰۰ / admin123</p>
+        </div>
+      </section>
+    </main>
+    <script src="data/lessons-data.js"></script>
+    <script src="data/content.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/ui-common.js"></script>
+    <script src="js/pages/auth.js"></script>
+  </body>
+</html>
